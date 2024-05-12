@@ -1,11 +1,37 @@
-let num = 266219;
-let prodOfNumber = 1;
-let arr = Array.from(String(num), Number);
-console.log(arr);
+let lang = prompt("Введите язык ru или en");
 
-for (i = 0; i <= arr.length-1; i++) {
-    prodOfNumber *= arr[i];
+if (lang == 'ru') {
+    console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 
+                'Пятница', 'Суббота', 'Воскресенье'); 
+} else if (lang == 'en') {
+    console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                'Friday', 'Saturday', 'Sunday');
+} else if (lang != 'ru' && lang != 'en') {
+    console.log("Вы ввели не верно язык");
 };
 
-prodOfNumber = prodOfNumber**3; 
-console.log(String(prodOfNumber).slice(0,2));
+switch (lang) {
+    case 'ru':
+        console.log('Понедельник', 'Вторник', 'Среда', 'Четверг', 
+                    'Пятница', 'Суббота', 'Воскресенье');
+        break;
+    case 'en':
+        console.log('Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                    'Friday', 'Saturday', 'Sunday');
+        break;
+    default:
+        console.log("Вы ввели не верно язык");
+        break;    
+};
+
+let arrWeeks = [];
+    arrWeeks.ru = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 
+                    'Пятница', 'Суббота', 'Воскресенье'];
+    arrWeeks.en = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+                    'Friday', 'Saturday', 'Sunday'];
+    console.log(arrWeeks[lang]); 
+    
+let  namePerson = 'Александр';
+console.log(
+    (namePerson === 'Артем') ? 'Директор' :
+    (namePerson === 'Александр') ? 'Преподователь':'Студент');
